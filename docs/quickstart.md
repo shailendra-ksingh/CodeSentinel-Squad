@@ -1,4 +1,4 @@
-# CodeSentinel Squad — 3-Minute Evaluator Walkthrough
+# CodeSentinel Squad - Evaluator Walkthrough
 
 ## 1. Build
 
@@ -8,7 +8,7 @@ mvn clean test
 
 Expected: all automated tests pass without an API key.
 
-## 2. Run the strongest demo
+## 2. Run a sample review  demo
 
 Run one realistic polyglot change set:
 

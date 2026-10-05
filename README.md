@@ -173,7 +173,7 @@ Project report: .../output/project/project-review.md
 Reviewed N of N file(s).
 ```
 
-See the [sample review reports](docs/sample-output/) for example reports.
+See the [sample review report](docs/sample-output/SampleVulnerableService-safe-mode.md) for an example.
 
 ## Agent squad
 
@@ -273,12 +273,15 @@ Shailendra_Singh_701096
 
 ## Design documentation
 
-* `Agent.md` — problem, innovation, architecture, business value and security considerations
-* `docs/architecture.md` — component and sequence design
-* `docs/architecture.svg` — visual architecture
-* `docs/sample-output/` — example review results
-* `docs/Evaluator-quickstart.md` — quick three-minute demonstration for evaluators
-
+* [Agent](Agent.md) — problem, innovation, architecture, business value and security considerations
+* [Architecture documentation](docs/architecture.md) — components and sequence design
+* [Architecture diagram](docs/architecture.svg) — visual overview of the architecture
+* [Agent workflow](docs/agent-workflow.md) — visual overview of the review workflow
+* [Sequence diagrams](docs/sequence-diagrams.md) — key CodeSentinel runtime interactions
+* [Design document](docs/design-documents.md) — key design decisions and the thinking behind them
+* [Sample review reports](docs/sample-output/SampleVulnerableService-safe-mode.md) — example review results
+* [Evaluator quickstart](docs/quickstart.md) — quick three-minute demonstration
+* 
 ## Executive Summary
 
 > **CodeSentinel does not just ask AI to review code — it first looks for evidence, runs the right specialist agents, checks generated results, remembers recurring defects, and then reviews the code as a connected system.**
