@@ -145,6 +145,3 @@ The key design principle is:
 
 > **Deterministic evidence comes first, focused AI reasoning comes next, and the final result remains subject to human review.**
 
-```
-
-**File name:** `docs/sequence-diagrams.md`
