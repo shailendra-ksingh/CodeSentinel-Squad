@@ -1,0 +1,2 @@
+2026-10-05T06:58:30.803441913Z|CRITICAL|1|Security|SQL appears to be assembled dynamically; prefer parameterized queries.
+2026-10-05T06:58:30.803441913Z|MINOR|1|Maintainability|SELECT * couples the query to schema changes and may fetch unnecessary columns.

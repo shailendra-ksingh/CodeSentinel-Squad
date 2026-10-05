@@ -1,0 +1,2 @@
+2026-10-05T09:44:25.156910200Z|MINOR|24|Documentation|Public method `writeAll` has no Javadoc comment.
+2026-10-05T09:44:25.156910200Z|MAJOR|1|Architecture|Class has 1 public method(s) across 352 lines. This may indicate too many responsibilities in one class.

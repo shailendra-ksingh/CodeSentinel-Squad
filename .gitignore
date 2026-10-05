@@ -1,0 +1,14 @@
+# Build / IDE
+target/
+*.class
+.idea/
+.vscode/
+
+# Local credentials / environment
+.env
+.env.*
+!.env.example
+
+# Generated runtime output (sample docs remain tracked)
+output/*/Test*.java
+output/**/.DS_Store

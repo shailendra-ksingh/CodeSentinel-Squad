@@ -1,0 +1,2 @@
+2026-10-05T09:44:25.203922600Z|CRITICAL|31|Null Safety|Chained call on `sourcePath.get...()` result without a visible null check. This may cause NullPointerException.
+2026-10-05T09:44:25.203922600Z|MINOR|29|Documentation|Public method `review` has no Javadoc comment.

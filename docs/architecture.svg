@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="950" viewBox="0 0 1600 950">
+<defs>
+  <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 z" fill="#38506b"/></marker>
+  <style>
+    .title{font:700 34px Arial,Helvetica,sans-serif;fill:#16283b}
+    .subtitle{font:400 19px Arial,Helvetica,sans-serif;fill:#60758a}
+    .head{font:700 21px Arial,Helvetica,sans-serif;fill:#16283b}
+    .body{font:400 16px Arial,Helvetica,sans-serif;fill:#52677c}
+    .small{font:400 14px Arial,Helvetica,sans-serif;fill:#718395}
+    .box{stroke:#38506b;stroke-width:2;rx:16}
+    .arrow{stroke:#38506b;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+    .dash{stroke:#71879b;stroke-width:2;fill:none;stroke-dasharray:7 7;marker-end:url(#arrow)}
+  </style>
+</defs>
+<rect width="1600" height="950" fill="#f7f9fc"/>
+
+<!-- Header -->
+<text x="800" y="55" text-anchor="middle" class="title">CodeSentinel Squad</text>
+<text x="800" y="88" text-anchor="middle" class="subtitle">Evidence → Agents → Trust → Project Insight</text>
+
+<!-- Row 1 -->
+<rect x="55" y="130" width="250" height="125" class="box" fill="#ffffff"/>
+<rect x="350" y="130" width="330" height="125" class="box" fill="#eef5fb"/>
+<rect x="725" y="130" width="300" height="125" class="box" fill="#ffffff"/>
+<rect x="1070" y="130" width="475" height="125" class="box" fill="#f4f7fa"/>
+
+<text x="180" y="170" text-anchor="middle" class="head">Input</text>
+<text x="180" y="199" text-anchor="middle" class="body">1 file or many files</text>
+<text x="180" y="225" text-anchor="middle" class="small">CLI / project input</text>
+
+<text x="515" y="167" text-anchor="middle" class="head">Language Detection</text>
+<text x="515" y="197" text-anchor="middle" class="body">Deterministic evidence</text>
+<text x="515" y="224" text-anchor="middle" class="small">Java + polyglot checks</text>
+
+<text x="875" y="170" text-anchor="middle" class="head">Coordinator</text>
+<text x="875" y="199" text-anchor="middle" class="body">Evidence-based routing</text>
+<text x="875" y="225" text-anchor="middle" class="small">Safe Mode • fault isolation</text>
+
+<text x="1307" y="167" text-anchor="middle" class="head">Specialist Squad</text>
+<text x="1307" y="197" text-anchor="middle" class="body">Security • Test • Documentation</text>
+<text x="1307" y="224" text-anchor="middle" class="body">Architecture • Critic</text>
+
+<!-- Row 1 arrows -->
+<path d="M305 192 L350 192" class="arrow"/>
+<path d="M680 192 L725 192" class="arrow"/>
+<path d="M1025 192 L1070 192" class="arrow"/>
+
+<!-- Row 2 -->
+<rect x="180" y="315" width="300" height="120" class="box" fill="#ffffff"/>
+<rect x="650" y="315" width="300" height="120" class="box" fill="#ffffff"/>
+<rect x="1120" y="315" width="300" height="120" class="box" fill="#ffffff"/>
+
+<text x="330" y="354" text-anchor="middle" class="head">Memory</text>
+<text x="330" y="383" text-anchor="middle" class="body">Recurring findings</text>
+<text x="330" y="410" text-anchor="middle" class="small">History across runs</text>
+
+<text x="800" y="354" text-anchor="middle" class="head">Secret Redactor</text>
+<text x="800" y="383" text-anchor="middle" class="body">Safe AI context</text>
+<text x="800" y="410" text-anchor="middle" class="small">Credentials masked first</text>
+
+<text x="1270" y="354" text-anchor="middle" class="head">Test → Critic → Revise</text>
+<text x="1270" y="383" text-anchor="middle" class="body">Generate → validate → revise</text>
+<text x="1270" y="410" text-anchor="middle" class="small">Maximum one revision</text>
+
+<!-- Row 2 arrows -->
+<path d="M515 255 L515 275 L330 275 L330 315" class="arrow"/>
+<path d="M875 255 L875 315" class="arrow"/>
+<path d="M1307 255 L1307 315" class="arrow"/>
+
+<!-- Context strip -->
+<rect x="180" y="485" width="1240" height="62" rx="14" fill="#eaf1f7" stroke="#a5b5c4" stroke-width="1.5"/>
+<text x="800" y="512" text-anchor="middle" class="head" font-size="18">Project context</text>
+<text x="800" y="536" text-anchor="middle" class="small">Redacted source + deterministic findings + specialist results</text>
+
+<!-- Row 3 -->
+<rect x="120" y="610" width="500" height="150" class="box" fill="#eef5fb"/>
+<rect x="685" y="610" width="300" height="150" class="box" fill="#ffffff"/>
+<rect x="1050" y="610" width="430" height="150" class="box" fill="#f4f7fa"/>
+
+<text x="370" y="651" text-anchor="middle" class="head">Cross-Language Project Integration</text>
+<text x="370" y="682" text-anchor="middle" class="body">2+ files • contracts • coupling • consistency</text>
+<text x="370" y="710" text-anchor="middle" class="small">Java • TypeScript • Python • SQL • YAML • JSON</text>
+<text x="370" y="737" text-anchor="middle" class="small">Looks across file and language boundaries</text>
+
+<text x="835" y="651" text-anchor="middle" class="head">Quality Gate</text>
+<text x="835" y="682" text-anchor="middle" class="body">Score + PASS / ACTION</text>
+<text x="835" y="710" text-anchor="middle" class="small">Triage signal, not certification</text>
+<text x="835" y="737" text-anchor="middle" class="small">Explainable deterministic score</text>
+
+<text x="1265" y="651" text-anchor="middle" class="head">Human Decision</text>
+<text x="1265" y="682" text-anchor="middle" class="body">Approve • Fix • Rerun</text>
+<text x="1265" y="710" text-anchor="middle" class="small">AI remains advisory</text>
+<text x="1265" y="737" text-anchor="middle" class="small">Final decision stays with the reviewer</text>
+
+<!-- Row 3 arrows -->
+<path d="M800 547 L800 580 L370 580 L370 610" class="arrow"/>
+<path d="M620 685 L685 685" class="arrow"/>
+<path d="M985 685 L1050 685" class="arrow"/>
+
+<!-- Supporting links, kept short and non-crossing -->
+<path d="M330 435 L330 485" class="dash"/>
+<path d="M800 435 L800 485" class="dash"/>
+<path d="M1270 435 L1270 485" class="dash"/>
+
+<!-- Footer -->
+<rect x="120" y="810" width="1360" height="78" rx="16" fill="#f0f4f8" stroke="#b1bfcc" stroke-width="1.5"/>
+<text x="800" y="840" text-anchor="middle" class="head" font-size="18">Trust and control are built into the flow</text>
+<text x="800" y="866" text-anchor="middle" class="small">Safe Mode keeps source local • secrets are redacted before AI • failures do not discard useful results</text>
+</svg>

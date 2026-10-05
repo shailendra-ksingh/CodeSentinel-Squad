@@ -1,0 +1,2 @@
+2026-10-05T09:44:25.352785200Z|MINOR|21|Encapsulation|Public mutable field exposes internal state directly. Consider a private field with an accessor.
+2026-10-05T09:44:25.352785200Z|MINOR|24|Encapsulation|Public mutable field exposes internal state directly. Consider a private field with an accessor.

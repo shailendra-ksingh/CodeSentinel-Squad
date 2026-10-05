@@ -1,0 +1,2 @@
+2026-10-05T09:44:24.882269400Z|CRITICAL|11|Null Safety|Chained call on `path.get...()` result without a visible null check. This may cause NullPointerException.
+2026-10-05T09:44:24.882269400Z|MINOR|10|Documentation|Public method `detect` has no Javadoc comment.
