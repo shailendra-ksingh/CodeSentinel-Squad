@@ -1,4 +1,4 @@
-# CodeSentinel Squad — Architecture
+# CodeSentinel Squad - Architecture
 
 ![CodeSentinel Architecture](architecture.svg)
 

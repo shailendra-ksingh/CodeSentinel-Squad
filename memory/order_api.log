@@ -1,2 +1,0 @@
-2026-10-05T06:58:30.799185900Z|MINOR|1|Type Safety|TypeScript `any` weakens compile-time guarantees at this boundary.
-2026-10-05T06:58:30.799185900Z|MAJOR|4|Security|Direct innerHTML assignment can create an XSS sink when the value is not trusted.

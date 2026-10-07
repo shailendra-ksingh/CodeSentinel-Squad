@@ -1,3 +1,0 @@
-2026-10-05T09:44:24.992805600Z|MAJOR|70|Error Handling|Broad `catch (Exception e)` can hide specific failures. Prefer handling the expected exception types.
-2026-10-05T09:44:24.992805600Z|MAJOR|84|JEE Anti-pattern|Method name suggests a data-mutating operation but no @Transactional annotation was found nearby.
-2026-10-05T09:44:24.992805600Z|MAJOR|1|Architecture|Class has 3 public method(s) across 140 lines. This may indicate too many responsibilities in one class.

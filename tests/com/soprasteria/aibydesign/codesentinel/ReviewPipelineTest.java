@@ -124,7 +124,14 @@ class ReviewPipelineTest {
         run(llm, VULNERABLE, tmp);
 
         assertFalse(llm.prompts.isEmpty());
-        assertTrue(llm.prompts.stream().noneMatch(p -> p.contains("EXAMPLE_NOT_A_REAL_SECRET")));
+        assertTrue(
+                llm.prompts.stream()
+                        .noneMatch(p -> p.contains("EXAMPLE_NOT_A_REAL_SECRET")),
+                () -> "Secret found in AI prompt:\n"
+                        + llm.prompts.stream()
+                        .filter(p -> p.contains("EXAMPLE_NOT_A_REAL_SECRET"))
+                        .findFirst()
+                        .orElse("<not found>"));
     }
 
     @Test

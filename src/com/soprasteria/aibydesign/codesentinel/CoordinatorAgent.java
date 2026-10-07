@@ -3,13 +3,12 @@ package com.soprasteria.aibydesign.codesentinel;
 import java.util.List;
 
 /**
- * Coordinates the specialist agents.
+ * Coordinates the specialist agents during a code review.
  *
- * The Coordinator does not perform the specialist work itself.
- * It looks at the findings, decides which agents are relevant,
- * and manages the Test Agent -> Critic -> Revision loop.
+ * The Coordinator selects relevant specialists and manages the
+ * Test Agent -> Critic -> Revision flow.
  *
- * A failure in one specialist should not stop the complete review.
+ * A failure in one specialist does not stop the rest of the review.
  */
 public class CoordinatorAgent {
 
@@ -37,30 +36,32 @@ public class CoordinatorAgent {
 
         SquadResult result = new SquadResult();
 
+        // Keep original findings for reports and review memory.
         result.findings = findings;
         result.recurringFindings = recurringFindings;
 
-        /*
-         * Safe Mode:
-         * The deterministic analyzer can still provide useful results
-         * even when an AI API key is not configured.
-         */
+        // Deterministic review still works without an AI API key.
         if (!llm.isConfigured()) {
             result.safeMode = true;
             return result;
         }
 
         /*
-         * Privacy: hard-coded credential values are masked before the source
-         * is sent to the AI service. Static analysis already ran on the
-         * original text, so the issue is still reported.
+         * Only the redacted source is allowed to reach AI agents.
+         * Local analysis has already been performed on the original source.
          */
         String safeSource = SecretRedactor.redact(sourceCode);
+
+        /*
+         * Findings can contain values taken from the source, so create
+         * a separate safe copy for AI processing.
+         */
+        List<Finding> safeFindings = redactFindingsForAi(findings);
 
         for (SpecialistAgent agent : specialists) {
 
             try {
-                if (!agent.shouldRun(safeSource, findings)) {
+                if (!agent.shouldRun(safeSource, safeFindings)) {
                     result.skippedAgents.add(agent.name());
                     continue;
                 }
@@ -72,7 +73,7 @@ public class CoordinatorAgent {
                     runTestAgentWithCriticLoop(
                             className,
                             safeSource,
-                            findings,
+                            safeFindings,
                             testAgent,
                             result);
 
@@ -81,19 +82,15 @@ public class CoordinatorAgent {
                     String output = agent.execute(
                             className,
                             safeSource,
-                            findings,
+                            safeFindings,
                             llm);
 
-                    result.agentOutputs.put(agent.name(), output);
+                    result.agentOutputs.put(
+                            agent.name(),
+                            output);
                 }
 
             } catch (Exception e) {
-
-                /*
-                 * One specialist should not bring down the complete review.
-                 * The warning is included in the final report so a developer
-                 * knows that manual review may still be required.
-                 */
                 recordAgentFailure(agent, e, result);
             }
         }
@@ -102,10 +99,7 @@ public class CoordinatorAgent {
     }
 
     /**
-     * Runs the Test Agent and then sends its output to the Critic.
-     *
-     * If the Critic rejects the first version, the feedback is sent back
-     * to the Test Agent for one revision.
+     * Generates tests, checks them with the Critic and allows one revision.
      */
     private void runTestAgentWithCriticLoop(
             String className,
@@ -186,7 +180,24 @@ public class CoordinatorAgent {
     }
 
     /**
-     * Records a specialist failure without stopping the complete review.
+     * Creates an AI-safe copy of the findings.
+     *
+     * The original findings remain unchanged for local reporting.
+     */
+    private List<Finding> redactFindingsForAi(List<Finding> findings) {
+
+        return findings.stream()
+                .map(finding -> new Finding(
+                        finding.getSeverity(),
+                        finding.getLineNumber(),
+                        finding.getCategory(),
+                        SecretRedactor.redact(
+                                finding.getDescription())))
+                .toList();
+    }
+
+    /**
+     * Records a specialist failure without stopping the review.
      */
     private void recordAgentFailure(
             SpecialistAgent agent,
@@ -207,6 +218,7 @@ public class CoordinatorAgent {
     }
 
     private String safeMessage(Exception e) {
+
         if (e.getMessage() == null || e.getMessage().isBlank()) {
             return e.getClass().getSimpleName();
         }

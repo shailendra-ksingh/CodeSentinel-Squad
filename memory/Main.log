@@ -1,4 +1,0 @@
-2026-10-05T09:44:24.950803600Z|MAJOR|74|Error Handling|Broad `catch (Exception e)` can hide specific failures. Prefer handling the expected exception types.
-2026-10-05T09:44:24.950803600Z|MAJOR|121|Error Handling|Broad `catch (Exception e)` can hide specific failures. Prefer handling the expected exception types.
-2026-10-05T09:44:24.950803600Z|MINOR|29|Documentation|Public method `main` has no Javadoc comment.
-2026-10-05T09:44:24.950803600Z|MAJOR|1|Architecture|Class has 1 public method(s) across 183 lines. This may indicate too many responsibilities in one class.

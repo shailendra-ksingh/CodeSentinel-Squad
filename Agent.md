@@ -1,6 +1,7 @@
 # CodeSentinel Squad
+## **Multi-Agent Code Review for Polyglot Applications**
 
-*Evidence-driven **Multi-Agent** code review for enterprise application stacks.*
+*Evidence-driven review for enterprise application stacks.*
 
 ## Team Details
 
@@ -33,7 +34,7 @@ The workflow is:
 4. Generated tests are reviewed by a Critic and can be revised once.
 5. Findings are stored so recurring issues can be identified in later reviews.
 6. For multi-file reviews, a Project Integration Agent checks relationships between the files.
-7. A final quality gate brings the findings together and identifies areas that still require human Evaluatorment.
+7. A final quality gate brings the findings together and identifies areas that still require human judgement.
 
 The result is a Markdown report showing the findings, supporting evidence, agents that ran, decisions made by the workflow and items that require human review.
 
@@ -173,7 +174,7 @@ CodeSentinel combines several parts of the review process instead of relying on 
 * credential values are redacted before AI requests;
 * multiple files can be reviewed together rather than only as independent files;
 * the project-level pass can identify cross-language and cross-file issues;
-* the quality gate separates automated findings from areas requiring human Evaluatorment.
+* the quality gate separates automated findings from areas requiring human judgement.
 
 The implementation is kept lightweight. The AI service is behind an `LlmClient` interface, allowing the core workflow and automated tests to run without a network connection or API key.
 
@@ -209,7 +210,7 @@ A typical file review contains:
 
 Example reports are available here:
 
-[Sample review reports](docs/sample-output/)
+[Sample review reports](docs/sample-output/SampleVulnerableService-safe-mode.md)
 
 ## 14. Data / Security Considerations
 

@@ -1,3 +1,0 @@
-2026-10-05T09:44:25.393790900Z|MAJOR|70|Error Handling|Broad `catch (Exception e)` can hide specific failures. Prefer handling the expected exception types.
-2026-10-05T09:44:25.393790900Z|MINOR|54|Documentation|Public method `analyze` has no Javadoc comment.
-2026-10-05T09:44:25.393790900Z|MAJOR|1|Architecture|Class has 2 public method(s) across 194 lines. This may indicate too many responsibilities in one class.

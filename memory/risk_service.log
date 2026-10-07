@@ -1,3 +1,0 @@
-2026-10-05T06:58:30.801608281Z|CRITICAL|2|Security|Possible hardcoded credential or secret detected in Python source.
-2026-10-05T06:58:30.801608281Z|CRITICAL|3|Security|Dynamic eval/exec can execute attacker-controlled input when data reaches this path.
-2026-10-05T06:58:30.801608281Z|MAJOR|6|Error Handling|Bare `except:` catches every exception and can hide unexpected failures.

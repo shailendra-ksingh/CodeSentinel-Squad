@@ -1,2 +1,0 @@
-2026-10-05T06:58:30.805682846Z|CRITICAL|4|Security|Container is configured as privileged; verify that host-level access is genuinely required.
-2026-10-05T06:58:30.805682846Z|CRITICAL|5|Security|Possible hardcoded credential or secret detected in YAML source.

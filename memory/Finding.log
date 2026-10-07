@@ -1,5 +1,0 @@
-2026-10-05T09:44:24.806210700Z|MINOR|25|Documentation|Public method `getSeverity` has no Javadoc comment.
-2026-10-05T09:44:24.806210700Z|MINOR|26|Documentation|Public method `getLineNumber` has no Javadoc comment.
-2026-10-05T09:44:24.806210700Z|MINOR|27|Documentation|Public method `getCategory` has no Javadoc comment.
-2026-10-05T09:44:24.806210700Z|MINOR|28|Documentation|Public method `getDescription` has no Javadoc comment.
-2026-10-05T09:44:24.806210700Z|MINOR|39|Documentation|Public method `toString` has no Javadoc comment.

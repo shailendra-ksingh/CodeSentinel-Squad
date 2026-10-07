@@ -1,6 +1,0 @@
-2026-10-05T09:44:24.677670200Z|MAJOR|90|Error Handling|Broad `catch (Exception e)` can hide specific failures. Prefer handling the expected exception types.
-2026-10-05T09:44:24.677670200Z|MAJOR|171|Error Handling|Broad `catch (Exception e)` can hide specific failures. Prefer handling the expected exception types.
-2026-10-05T09:44:24.677670200Z|CRITICAL|210|Null Safety|Chained call on `e.get...()` result without a visible null check. This may cause NullPointerException.
-2026-10-05T09:44:24.677670200Z|CRITICAL|211|Null Safety|Chained call on `e.get...()` result without a visible null check. This may cause NullPointerException.
-2026-10-05T09:44:24.677670200Z|MINOR|32|Documentation|Public method `run` has no Javadoc comment.
-2026-10-05T09:44:24.677670200Z|MAJOR|1|Architecture|Class has 1 public method(s) across 216 lines. This may indicate too many responsibilities in one class.
